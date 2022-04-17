@@ -97,7 +97,8 @@ public class SuburbsServiceImpl implements SuburbsService {
      * @throws ValidationException
      */
     private void validateSearchRequest(SearchSuburbsRequest searchSuburbsRequest) throws ValidationException {
-        if (searchSuburbsRequest.getSearchCriteria() == null) {
+        if (searchSuburbsRequest.getSearchCriteria() == null || searchSuburbsRequest.getSearchCriteria().getEndPostCode() == 0
+                || searchSuburbsRequest.getSearchCriteria().getStartPostCode() == 0) {
             throw new ValidationException(CommonConstants.ERRORCODE_002, CommonConstants.ERRORDESC_002);
         } else if (searchSuburbsRequest.getSearchCriteria().getStartPostCode() > searchSuburbsRequest.getSearchCriteria().getEndPostCode()) {
             throw new ValidationException(CommonConstants.ERRORCODE_001, CommonConstants.ERRORDESC_001);
