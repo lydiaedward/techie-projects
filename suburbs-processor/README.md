@@ -104,7 +104,7 @@ http://localhost:8085/api/suburbs/add
 ### API Endpoint: 
 http://localhost:8085/api/suburbs/search
 
-###A PI Request:
+### API Request:
 {
 "searchCriteria": {
 "endPostCode": "6010",
