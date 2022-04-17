@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS TBL_SUBURBS;
+
+CREATE TABLE TBL_SUBURBS (
+  suburb_id INT auto_increment PRIMARY KEY,
+  postcode INT NOT NULL,
+  suburb_name VARCHAR(250) NOT NULL
+);
